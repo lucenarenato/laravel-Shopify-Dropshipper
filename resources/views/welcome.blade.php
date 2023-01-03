@@ -4,12 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -95,6 +98,9 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+            <div id="app"><example-component></example-component></div>
         </div>
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </body>
 </html>
